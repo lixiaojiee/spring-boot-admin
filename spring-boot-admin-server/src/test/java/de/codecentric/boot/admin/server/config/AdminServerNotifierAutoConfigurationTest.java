@@ -204,7 +204,7 @@ public class AdminServerNotifierAutoConfigurationTest {
         @Override
         public Mono<Void> notify(InstanceEvent event) {
             this.events.add(event);
-            return null;
+            return Mono.empty();
         }
 
         public List<InstanceEvent> getEvents() {
